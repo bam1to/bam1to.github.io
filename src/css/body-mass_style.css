@@ -1,0 +1,39 @@
+.forms.central-selects__forms .inputs {
+  border: 1px solid #c2c0c0;
+  padding: 11.12px;
+  border-radius: 5px;
+}
+
+.container-left .bottom-left-content {
+  display: grid;
+  grid-template-columns: 100%;
+  row-gap: 35px;
+  margin: 10% 20%;
+  padding: 10% 10%;
+}
+.container-left .bottom-left-content .central-selects {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  justify-items: center;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+.forms .labels {
+  color: #a8a3a3;
+  font-size: 14px;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+
+.forms.central-selects__forms {
+  max-width: 100%;
+  align-items: flex-start;
+}
+.forms.central-selects__forms .inputs {
+  width: 59.22px;
+}

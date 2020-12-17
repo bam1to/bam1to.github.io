@@ -1,0 +1,80 @@
+.inputs[type=range]::-moz-range-track {
+  cursor: pointer;
+  height: 5px;
+  background-color: #5bd622;
+  border-radius: 5px;
+}
+
+.inputs[type=range]::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  background-color: #5bd622;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  margin-top: -2%;
+}
+
+.container-left .bottom-left-content {
+  grid-template-columns: 1fr;
+  margin: 1% 20%;
+  row-gap: 25px;
+}
+.container-left .bottom-left-content .central-selects {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+}
+.container-left .bottom-left-content .central-selects .forms {
+  max-width: 75%;
+  min-width: 75%;
+  justify-self: center;
+  padding-top: 5px;
+}
+.container-left .bottom-left-content .central-selects .calories-choise__select {
+  box-sizing: border-box;
+  font-size: inherit;
+  min-width: 86px;
+  max-width: 86px;
+  min-height: 39px;
+  max-height: 39px;
+  border-radius: 5px;
+  border: 1px solid #c2c0c0;
+  padding: 10px;
+}
+
+.forms .inputs[type=number] {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 39px;
+  max-height: 39px;
+  border: 1px solid #c2c0c0;
+  padding: 11.12px;
+  border-radius: 5px;
+}
+.forms .inputs[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.forms .inputs[type=range]:focus, .forms .inputs[type=range]:active {
+  outline: none;
+}
+.forms .inputs[type=range]::-webkit-slider-runnable-track {
+  cursor: pointer;
+  height: 5px;
+  background-color: #5bd622;
+  border-radius: 5px;
+}
+.forms .inputs[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  background-color: #5bd622;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  margin-top: -2%;
+}
+
+.inputs[type=range]::-moz-range-thumb {
+  -moz-appearance: none;
+}

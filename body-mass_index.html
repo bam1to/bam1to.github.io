@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Калькулятор калорий</title>
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="src/css/modal_style.css" />
+    <link rel="stylesheet" href="src/css/body-mass_style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="content">
+      <div class="container-left">
+        <div class="top-left-content">
+          <h1 class="heading">Индекс массы тела (ИМТ)</h1>
+          <p class="discription-norm">
+            Величина, позволяющая оценить степень соответствия массы человека и
+            его роста и тем самым косвенно судить о том, является ли масса
+            недостаточной, нормальной или избыточной.
+          </p>
+        </div>
+        <div class="bottom-left-content">
+          <div class="central-selects">
+            <form class="forms central-selects__forms growth-choise">
+              <label for="growth" class="labels growth-choise__label"
+                >Рост (в м)</label
+              >
+              <input
+                type="number"
+                value="1.5"
+                class="inputs growth-choise__select"
+                min="1.45"
+                max="2.20"
+                step="0.05"
+              />
+            </form>
+            <form class="forms central-selects__forms weight-choise">
+              <label for="weight" class="labels weight-choise__label"
+                >Вес (в кг)</label
+              >
+              <input
+                type="number"
+                class="inputs weight-choise__select"
+                value="50"
+                min="20"
+              />
+            </form>
+          </div>
+          <div class="finish-button-container oblast-1">
+            <button class="finish-button">
+              <a href="#openModal"> <span> Расчёт калорий</span></a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container-right">
+        <h2 class="other-calculators">Другие калькуляторы...</h2>
+        <div class="calc-list">
+          <button class="calc-elem" type="button" value="basal-metabolism">
+            <a href="calories_index.html"> Основной обмен веществ</a>
+          </button>
+          <button class="calc-elem" type="button" value="body-mass-index">
+            <a href="body-mass_index.html">Индекс массы тела (ИМТ)</a>
+          </button>
+          <button class="calc-elem" type="button" value="protein-rate">
+            <a href="bju_index.html">Норма белков, жиров, углеводов</a>
+          </button>
+          <button class="calc-elem" type="button" value="calorie-consumption">
+            <a href="fiz_index.html"
+              >Расход калорий при физической активности</a
+            >
+          </button>
+        </div>
+      </div>
+    </section>
+    <div id="openModal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Ваш индекс:</h3>
+            <a href="#" title="Close" class="close">×</a>
+          </div>
+          <div class="modal-body">
+            <p class="result"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/js/body-mass_script.js"></script>
+  </body>
+</html>

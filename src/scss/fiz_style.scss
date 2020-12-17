@@ -1,0 +1,18 @@
+
+.container-left .bottom-left-content{
+    .right-selects {
+        grid-template-rows: repeat(3, 1fr);
+        .finish-button-container{
+            padding-left: 0;
+            align-self: end;
+        }
+    }
+}
+
+
+.oblast-2 {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}

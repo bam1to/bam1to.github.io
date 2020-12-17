@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Калькулятор калорий</title>
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="src/css/modal_style.css">
+    <link rel="stylesheet" href="src/css/fiz_style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="content">
+      <div class="container-left">
+        <div class="top-left-content">
+          <h1 class="heading">Суточная норма калорий при физической активности</h1>
+          <p class="discription-norm">
+            Расчёт ежедневного потребления калорий можно произвести по двум
+            разным методикам: одной из самых современных, по формуле
+            Миффлина-Сан Жеора, выведенной в 2005 году, и по более старой, но
+            пользующейся у диетологов популярностью и в наше время, формуле
+            Харриса-Бенедикта, известной с 1919 года.
+          </p>
+        </div>
+        <div class="bottom-left-content">
+          <div class="left-selects">
+            <form class="forms left-selects__forms point-choise">
+                <label for="point" class="labels point-choise__label"
+                  >Моя цель</label
+                >
+                <select
+                  name="point"
+                  id="point"
+                  class="selector point-choise__select"
+                >
+                  <option value="down">Сбросить Вес</option>
+                  <option value="up">
+                    Набрать Вес
+                  </option>
+                  
+                </select>
+              </form>
+            <form class="forms left-selects__forms activity-choise">
+              <label for="activity" class="labels activity-choise__label"
+                >Активность</label
+              >
+              <select
+                name="activity"
+                id="activity"
+                class="selector activity-choise__select"
+              >
+                <option value="1.0">Основной обмен веществ</option>
+                <option value="1.2">
+                  Минимум/отсутствие физической нагрузки
+                </option>
+                <option value="1.375">Три раза в неделю</option>
+                <option value="1.4625">Пять раз в неделю</option>
+                <option value="1.550">Пять раз в неделю интенсивно</option>
+                <option value="1.6375">Каждый день</option>
+                <option value="1.725">
+                  Каждый день интенсивно или 2 раза в день
+                </option>
+                <option value="1.9">
+                  Ежедневная физическая нагрузка + работа
+                </option>
+              </select>
+            </form>
+            <form class="forms left-selects__forms formula-choise">
+              <label for="formula" class="labels formula-choise__label"
+                >Формула</label
+              >
+              <select
+                name="formula"
+                id="formula"
+                class="selector formula-choise__select"
+              >
+                <option value="miff">Миффлина - Сан Жеора</option>
+                <option value="Harris">Харриса-Бенедикта</option>
+              </select>
+            </form>
+          </div>
+          <div class="right-selects">
+            <form class="forms right-selects__forms sex-choise">
+              <label for="sex" class="labels sex-choise__label">Пол</label>
+              <div class="sex-choise__buttons">
+                <input
+                  type="button"
+                  class="inputs sex-choise__button sex-choise-left__button selected"
+                  value="Ж"
+                >
+                  
+                </input>
+                <input
+                  type="button"
+                  class="inputs sex-choise__button sex-choise-right__button"
+                  value="М"
+                >
+                  
+                </input>
+              </div>
+            </form>
+            <form class="forms right-selects__forms age-choise">
+              <label for="age" class="labels age-choise__label">Возраст</label>
+              <input
+                type="number"
+                value="18"
+                class="inputs age-choise__select"
+                min="13"
+                max="80"
+              />
+            </form>
+            <form class="forms right-selects__forms growth-choise">
+              <label for="growth" class="labels growth-choise__label"
+                >Рост (в см)</label
+              >
+              <input
+                type="number"
+                value="150"
+                class="inputs growth-choise__select"
+                min="145"
+                max="220"
+                step="0.5"
+              />
+            </form>
+            <form class="forms right-selects__forms weight-choise">
+              <label for="weight" class="labels weight-choise__label"
+                >Вес (в кг)</label
+              >
+              <input
+                type="number"
+                class="inputs weight-choise__select"
+                value="50"
+                min="20"
+              />
+            </form>
+            <div class="finish-button-container oblast-2">
+                <button class="finish-button"><a href="#openModal"> <span> Расчёт калорий</span></a></button>
+              </div>
+          </div>
+          
+        </div>
+      </div>
+      <!-- <div class="result switched-off">
+        <h2>Вам необходимо:</h2>
+        <span class="result-field"></span>
+      </div> -->
+      <div class="container-right">
+        <h2 class="other-calculators">Другие калькуляторы...</h2>
+        <div class="calc-list">
+          <button class="calc-elem" type="button" value="basal-metabolism">
+           <a href="calories_index.html"> Основной обмен веществ</a></button>
+          <button class="calc-elem" type="button" value="body-mass-index"><a href="body-mass_index.html">Индекс массы тела (ИМТ)</a> </button>
+          <button class="calc-elem" type="button" value="protein-rate"><a href="bju_index.html">Норма белков, жиров, углеводов</a> </button>
+          <button class="calc-elem" type="button" value="calorie-consumption"><a href="fiz_index.html">Расход калорий при физической активности</a></button>
+        </div>
+      </div>
+    </section>
+    <div id="openModal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Вам необходимо:</h3>
+            <a href="#" title="Close" class="close">×</a>
+          </div>
+          <div class="modal-body">    
+            <p class="ideal">Идеальная диета: </p>
+            <p class="extrim">Экстримальная диета: </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/js/functionality_script.js"></script>
+    <script src="src/js/index.js"></script>
+  </body>
+</html>
+
+  

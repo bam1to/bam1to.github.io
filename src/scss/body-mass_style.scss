@@ -1,0 +1,47 @@
+$standart-text-color: #878787;
+$standart-color: #5bd622;
+$screen_size_width: 1920;
+
+%inputs-style {
+  border: 1px solid #c2c0c0;
+  padding: 11.12px;
+  border-radius: 5px;
+}
+
+.container-left {
+  .bottom-left-content {
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 35px;
+    margin: 10% 20%;
+    padding: 10% 10%;
+    .central-selects {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 50% 50%;
+      justify-items: center;
+    } 
+  }  
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    .labels {
+      color: #a8a3a3;
+      font-size: 14px;
+      margin-bottom: 10px;
+      align-self: flex-start;
+    }
+  }
+
+.forms.central-selects__forms {
+  max-width: 100%;
+  align-items: flex-start;
+  .inputs {
+    width: 59.22px;
+    @extend %inputs-style;
+  }
+}
+
